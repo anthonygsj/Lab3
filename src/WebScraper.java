@@ -23,11 +23,8 @@ public class WebScraper {
     public static void main(String[] unused) {
         String input = urlToString("http://erdani.com/tdpl/hamlet.txt");
         int count = 0;
-        char[] line = input.toCharArray();
-        for(int i = 0; i < input.length(); i++) {
-            line = input[i].readLine().split("\\s");
-            count += line.length();
-        }
+        String[] words = input.split("\\s");
+        count = words.length;
         System.out.println(count);
         System.out.println(input);
     }
